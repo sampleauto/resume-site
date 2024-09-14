@@ -50,7 +50,7 @@ const projects: { title: string, href: string, description: string }[] = [
                       <div class="text-center">
                         <Avatar size="lg">
                           <AvatarImage
-                            src="/_nuxt/assets/Sam.png"
+                            src="/images/Sam.png"
                             alt="@radix/vue"
                             size="lg"
                           />
@@ -73,7 +73,6 @@ const projects: { title: string, href: string, description: string }[] = [
                 <NuxtLink to="/experience">
                   <NavigationMenuLink as-child>
                     <span
-                      href="/docs"
                       class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div class="text-sm font-medium leading-none">
@@ -111,7 +110,7 @@ const projects: { title: string, href: string, description: string }[] = [
               <li>
                 <NavigationMenuLink as-child>
                   <a
-                    href="/_nuxt/assets/resume.pdf"
+                    href="/files/resume.pdf"
                     class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     download="Samuel_Pilato_Resume.pdf"
                   >
