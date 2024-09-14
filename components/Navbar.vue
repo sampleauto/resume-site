@@ -10,22 +10,35 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const projects: { title: string, href: string, description: string }[] = [
-    {
-        title: 'PCBuildHub',
-        href: 'https://pcbh.sampleauto.net',
-        description: 'A tool to assist in building a PC. (WIP)',
-    },
-    {
-        title: 'DMScreen',
-        href: 'https://dmscreen.sampleauto.net',
-        description: 'A passion project for DnD to show basic character info on cards for DM use. (WIP)',
-    }
-]
+const projects: { title: string; href: string; description: string }[] = [
+  {
+    title: "PCBuildHub",
+    href: "https://pcbh.sampleauto.net",
+    description: "A tool to assist in building a PC. (WIP)",
+  },
+  {
+    title: "DMScreen",
+    href: "https://dmscreen.sampleauto.net",
+    description:
+      "A passion project for DnD to show basic character info on cards for DM use. (WIP)",
+  },
+  {
+    title: "Cherry On Top Events",
+    href: "https://cherryontopevents.org",
+    description:
+      "A website for people to get info on my wife's event planning business. (WIP)",
+  },
+  {
+    title: "Proposal Website",
+    href: "",
+    description:
+      "A website I made to propose to my wife shortly after graduation. (No link)",
+  },
+];
 </script>
 
 <template>
-  <div class="container flex pl-10">
+  <div class="container flex">
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
@@ -127,25 +140,46 @@ const projects: { title: string, href: string, description: string }[] = [
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-        <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-            <li v-for="project in projects" :key="project.title">
-              <NavigationMenuLink as-child>
-                <a
-                  :href="project.href"
-                  class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                >
-                  <div class="text-sm font-medium leading-none">{{ project.title }}</div>
-                  <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    {{ project.description }}
-                  </p>
-                </a>
-              </NavigationMenuLink>
-            </li>
-          </ul>
-        </NavigationMenuContent>
-      </NavigationMenuItem>
+          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul
+              class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
+            >
+              <li v-for="project in projects" :key="project.title">
+                <NavigationMenuLink as-child>
+                  <a
+                    v-if="project.href !== ''"
+                    :href="project.href"
+                    class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  >
+                    <div class="text-sm font-medium leading-none">
+                      {{ project.title }}
+                    </div>
+                    <p
+                      class="line-clamp-2 text-sm leading-snug text-muted-foreground"
+                    >
+                      {{ project.description }}
+                    </p>
+                  </a>
+                  <span
+                    v-else
+                    :href="project.href"
+                    class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  >
+                    <div class="text-sm font-medium leading-none">
+                      {{ project.title }}
+                    </div>
+                    <p
+                      class="line-clamp-2 text-sm leading-snug text-muted-foreground"
+                    >
+                      {{ project.description }}
+                    </p>
+                  </span>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
     <DarkmodeButton />
