@@ -9,6 +9,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Icon } from "@iconify/vue";
 
 const projects: { title: string; href: string; description: string }[] = [
   {
@@ -35,10 +36,23 @@ const projects: { title: string; href: string; description: string }[] = [
       "A website I made to propose to my wife shortly after graduation. (No link)",
   },
 ];
+
+const links: { title: string; href: string; icon: string }[] = [
+  {
+    title: "GitHub",
+    href: "https://github.com/sampleauto",
+    icon: "mdi-github",
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/samuelpilato/",
+    icon: "mdi-linkedin",
+  },
+];
 </script>
 
 <template>
-  <div class="container flex">
+  <div class="container flex mt-2">
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
@@ -48,6 +62,10 @@ const projects: { title: string; href: string; description: string }[] = [
             </NavigationMenuLink>
           </NuxtLink>
         </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+    <NavigationMenu class="ml-auto">
+      <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Introduction</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -105,7 +123,6 @@ const projects: { title: string; href: string; description: string }[] = [
                 <NuxtLink to="about">
                   <NavigationMenuLink as-child>
                     <span
-                      href="/about"
                       class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div class="text-sm font-medium leading-none">
@@ -180,8 +197,35 @@ const projects: { title: string; href: string; description: string }[] = [
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Links</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul
+              class="grid w-[250px] gap-3 p-4 md:w-[300px] md:grid-cols-2 lg:w-[350px]"
+            >
+              <li v-for="link in links" :key="link.title">
+                <NavigationMenuLink as-child>
+                  <a
+                    v-if="link.href !== ''"
+                    :href="link.href"
+                    target="_blank"
+                    class="flex items-center justify-center select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  >
+                    <Icon :icon="link.icon" height="28px"/>
+                    <div class="text-md font-medium leading-none ml-1 pb-1">
+                      {{ link.title }}
+                    </div>
+                  </a>
+                </NavigationMenuLink>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <DarkmodeButton />
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-    <DarkmodeButton />
   </div>
 </template>
