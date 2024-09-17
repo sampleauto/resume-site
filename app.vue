@@ -3,7 +3,7 @@ useRouterFocusReset();
 </script>
 
 <template>
-  <div class="min-h-screen max-h-screen h-screen overflow-hidden">
+  <div class="max-h-screen">
     <NuxtRouteAnnouncer />
     <NuxtLayout />
     <NuxtPage />
