@@ -4,7 +4,6 @@ const route = useRoute();
 
 <template>
   <div>
-    <h1>Experience page!</h1>
-    <p>Current route: {{ route.path }}</p>
+    <ResumePage />
   </div>
 </template>

@@ -52,7 +52,7 @@ const links: { title: string; href: string; icon: string }[] = [
 </script>
 
 <template>
-  <div class="container flex mt-2">
+  <div class="container flex mt-2 mb-2">
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
@@ -212,7 +212,7 @@ const links: { title: string; href: string; icon: string }[] = [
                     target="_blank"
                     class="flex items-center justify-center select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                   >
-                    <Icon :icon="link.icon" height="28px"/>
+                    <Icon :icon="link.icon" height="28px" />
                     <div class="text-md font-medium leading-none ml-1 pb-1">
                       {{ link.title }}
                     </div>
