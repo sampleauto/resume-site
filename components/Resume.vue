@@ -123,7 +123,7 @@ const jobs: {
 </script>
 
 <template>
-  <div class="container mt-8 mb-8">
+  <div class="mt-8 mb-8">
     <Card class="min-w-full">
       <CardHeader>
         <CardTitle> Experience </CardTitle>

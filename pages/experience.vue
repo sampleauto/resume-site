@@ -3,7 +3,8 @@ const route = useRoute();
 </script>
 
 <template>
-  <div>
-    <ResumePage />
+  <div class="container">
+    <Resume />
+    <Certifications />
   </div>
 </template>
