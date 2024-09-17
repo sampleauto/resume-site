@@ -224,7 +224,11 @@ const links: { title: string; href: string; icon: string }[] = [
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NuxtLink to="/files/Samuel_Pilato_Resume.pdf" external>
+          <NuxtLink
+            to="/files/Samuel_Pilato_Resume.pdf"
+            external
+            target="_blank"
+          >
             <NavigationMenuLink :class="navigationMenuTriggerStyle()">
               Resume
             </NavigationMenuLink>
