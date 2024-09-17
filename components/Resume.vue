@@ -6,6 +6,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const jobs: {
   company: string;
@@ -123,49 +124,52 @@ const jobs: {
 </script>
 
 <template>
-  <div class="mt-8 mb-8">
-    <Card class="min-w-full">
+  <div class="h-3/5 mt-4 mb-4">
+    <Card class="h-full">
       <CardHeader>
         <CardTitle> Experience </CardTitle>
         <CardDescription> Non-internship job experience </CardDescription>
       </CardHeader>
-      <CardContent v-for="job in jobs">
-        <Card class="w-full mb-5">
-          <CardHeader>
-            <CardTitle>
-              {{ job.company }}
-            </CardTitle>
-            <CardDescription class="flex">
-              <div>
-                {{ job.title }}
-              </div>
-              <div class="ml-auto">
-                {{ job.date }}
-              </div>
-            </CardDescription>
-          </CardHeader>
-          <CardContent class="flex">
-            <Card class="w-2/3">
-              <CardHeader>
-                <CardTitle> Description </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {{ job.description }}
-              </CardContent>
-            </Card>
-            <Card class="w-1/3 ml-4">
-              <CardHeader>
-                <CardTitle> Skills </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div v-for="skill in job.skills" class="mt-2">
-                  <strong>{{ skill.name }}:</strong>
-                  {{ skill.items.join(", ") }}
+
+      <CardContent class="h-full">
+        <ScrollArea class="h-5/6 w-full border-none">
+          <Card class="mb-5" v-for="job in jobs">
+            <CardHeader>
+              <CardTitle>
+                {{ job.company }}
+              </CardTitle>
+              <CardDescription class="flex">
+                <div>
+                  {{ job.title }}
                 </div>
-              </CardContent>
-            </Card>
-          </CardContent>
-        </Card>
+                <div class="ml-auto">
+                  {{ job.date }}
+                </div>
+              </CardDescription>
+            </CardHeader>
+            <CardContent class="flex">
+              <Card class="w-2/3">
+                <CardHeader>
+                  <CardTitle> Description </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {{ job.description }}
+                </CardContent>
+              </Card>
+              <Card class="w-1/3 ml-4">
+                <CardHeader>
+                  <CardTitle> Skills </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div v-for="skill in job.skills" class="mt-2">
+                    <strong>{{ skill.name }}:</strong>
+                    {{ skill.items.join(", ") }}
+                  </div>
+                </CardContent>
+              </Card>
+            </CardContent>
+          </Card>
+        </ScrollArea>
       </CardContent>
     </Card>
   </div>

@@ -1,9 +1,7 @@
-<script setup lang="ts">
-const route = useRoute();
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="container">
+  <div class="container h-full">
     <Resume />
     <Certifications />
   </div>

@@ -120,7 +120,25 @@ const links: { title: string; href: string; icon: string }[] = [
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="about">
+                <NuxtLink to="/school">
+                  <NavigationMenuLink as-child>
+                    <span
+                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    >
+                      <div class="text-sm font-medium leading-none">
+                        Education
+                      </div>
+                      <p
+                        class="line-clamp-2 text-sm leading-snug text-muted-foreground"
+                      >
+                        Click here to learn about my degree and studies.
+                      </p>
+                    </span>
+                  </NavigationMenuLink>
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/about">
                   <NavigationMenuLink as-child>
                     <span
                       class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -136,22 +154,6 @@ const links: { title: string; href: string; icon: string }[] = [
                     </span>
                   </NavigationMenuLink>
                 </NuxtLink>
-              </li>
-              <li>
-                <NavigationMenuLink as-child>
-                  <a
-                    href="/files/resume.pdf"
-                    class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    download="Samuel_Pilato_Resume.pdf"
-                  >
-                    <div class="text-sm font-medium leading-none">Resume</div>
-                    <p
-                      class="line-clamp-2 text-sm leading-snug text-muted-foreground"
-                    >
-                      Click here to download a copy of my current resume.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
               </li>
             </ul>
           </NavigationMenuContent>
@@ -197,7 +199,6 @@ const links: { title: string; href: string; icon: string }[] = [
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
         <NavigationMenuItem>
           <NavigationMenuTrigger>Links</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -221,6 +222,13 @@ const links: { title: string; href: string; icon: string }[] = [
               </li>
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NuxtLink to="/files/Samuel_Pilato_Resume.pdf" external>
+            <NavigationMenuLink :class="navigationMenuTriggerStyle()">
+              Resume
+            </NavigationMenuLink>
+          </NuxtLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <DarkmodeButton />
