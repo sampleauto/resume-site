@@ -20,7 +20,7 @@ const jobs: {
     title: "Sr. Software Engineer",
     location: "Remote",
     description:
-      "As a Senior Full Stack Developer, I assist leading the development of secure, scalable, and high-performance applications that meet the unique needs of our government customers and the\
+      "As a Senior Software Engineer, I assist leading the development of secure, scalable, and high-performance applications that meet the unique needs of our government customers and the\
       supporting government agencies. With expertise across the full technology stack, I design and implement front-end interfaces and back-end systems that drive operational\
       efficiency and enhance public service delivery. My role involves collaborating with cross-functional teams, including project managers, analysts, and QA teams, to gather requirements,\
       architect solutions, and ensure compliance with contract requirements. I have a deep understanding of modern web development frameworks, cloud platforms, and DevOps practices, which I use\
