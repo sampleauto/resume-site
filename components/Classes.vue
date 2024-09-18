@@ -19,15 +19,15 @@ const defaultValue = "Web Technologies";
 </script>
 
 <template>
-  <div class="h-full">
+  <div class="w=full h-full">
     <Card class="h-[90%]">
-      <CardHeader>
+      <CardHeader class="h-[10%]">
         <CardTitle class="flex">
             <div>
                 B.S. in Computer Science
             </div>
             <div class="ml-auto">
-                University of Texas at San Antonio
+                UTSA
             </div>
         </CardTitle>
         <CardDescription class="flex">
