@@ -4,8 +4,8 @@ import Certifications from "@/components/Certifications.vue";
 </script>
 
 <template>
-  <div class="container h-full pt-4 pb-4">
+  <div class="container max-h-full pt-4 pb-4">
     <Resume />
-    <Certifications class="mt-4"/>
+    <Certifications class="pt-4"/>
   </div>
 </template>

@@ -22,8 +22,22 @@ const defaultValue = "Web Technologies";
   <div class="h-full">
     <Card class="h-[90%]">
       <CardHeader>
-        <CardTitle> Classes </CardTitle>
-        <CardDescription> Relevant Coursework </CardDescription>
+        <CardTitle class="flex">
+            <div>
+                B.S. in Computer Science
+            </div>
+            <div class="ml-auto">
+                University of Texas at San Antonio
+            </div>
+        </CardTitle>
+        <CardDescription class="flex">
+            <div>
+                Concentration in Software Engineering
+            </div>
+            <div class="ml-auto">
+                Major GPA: 3.6
+            </div>
+        </CardDescription>
       </CardHeader>
       <CardContent class="h-[90%]">
         <ScrollArea class="h-full">

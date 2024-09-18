@@ -120,7 +120,7 @@ const links: { title: string; href: string; icon: string }[] = [
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/school">
+                <NuxtLink to="/education">
                   <NavigationMenuLink as-child>
                     <span
                       class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -235,7 +235,7 @@ const links: { title: string; href: string; icon: string }[] = [
           </NuxtLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <DarkmodeButton class="mr-auto"/>
+          <DarkmodeButton />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
