@@ -4,8 +4,9 @@ import { Separator } from "@/components/ui/separator";
 </script>
 
 <template>
-  <div>
-    <Navbar />
-    <Separator />
+  <div class="h-full">
+    <Navbar class="h-14"/>
+    <Separator class="w-full"/>
+    <NuxtPage class="h-[calc(100vh-57px)]"/>
   </div>
 </template>

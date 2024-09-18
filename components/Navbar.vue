@@ -52,7 +52,7 @@ const links: { title: string; href: string; icon: string }[] = [
 </script>
 
 <template>
-  <div class="container flex mt-2 mb-2">
+  <div class="container flex">
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
@@ -235,7 +235,7 @@ const links: { title: string; href: string; icon: string }[] = [
           </NuxtLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <DarkmodeButton />
+          <DarkmodeButton class="mr-auto"/>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
