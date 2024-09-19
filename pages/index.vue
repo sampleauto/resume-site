@@ -7,8 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
   <div class="container mx-auto p-8">
     <Card>
       <CardContent>
-        <div class="flex mt-4 mx-4">
-          <div class="text-center w-[50%]">
+        <div class="sm:flex mt-4 mx-4">
+          <div class="text-center sm:w-[50%]">
             <img
               src="/images/Sam.png"
               alt="Profile Picture"
@@ -19,7 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
               Senior Software Engineer
             </p>
           </div>
-          <div class="w-[50%] mx-4 text-justify">
+          <div class="sm:w-[50%] mx-4 text-justify">
             <p class="text-md text-muted-foreground mb-8">
               Welcome to my resume website. Here you can find information about
               my professional experience, education, and personal projects I'm
