@@ -23,30 +23,22 @@ const defaultValue = "Web Technologies";
     <Card class="h-[90%]">
       <CardHeader class="h-[10%]">
         <CardTitle class="flex">
-            <div>
-                B.S. in Computer Science
-            </div>
-            <div class="ml-auto">
-                UTSA
-            </div>
+          <div>B.S. in Computer Science</div>
+          <div class="ml-auto">UTSA</div>
         </CardTitle>
         <CardDescription class="flex">
-            <div>
-                Concentration in Software Engineering
-            </div>
-            <div class="ml-auto">
-                Major GPA: 3.6
-            </div>
+          <div>Concentration in Software Engineering</div>
+          <div class="ml-auto">Major GPA: 3.6</div>
         </CardDescription>
       </CardHeader>
       <CardContent class="h-[90%]">
         <ScrollArea class="h-full">
-        <Accordion
-          type="single"
-          class="w-full"
-          collapsible
-          :default-value="defaultValue"
-        >
+          <Accordion
+            type="single"
+            class="w-full"
+            collapsible
+            :default-value="defaultValue"
+          >
             <AccordionItem
               v-for="item in classes"
               :key="item.name"
@@ -86,8 +78,8 @@ const defaultValue = "Web Technologies";
                 </Card>
               </AccordionContent>
             </AccordionItem>
-        </Accordion>
-    </ScrollArea>
+          </Accordion>
+        </ScrollArea>
       </CardContent>
     </Card>
   </div>

@@ -6,6 +6,6 @@ import Certifications from "@/components/Certifications.vue";
 <template>
   <div class="container max-h-full pt-4 pb-4">
     <Resume />
-    <Certifications class="pt-4"/>
+    <Certifications class="pt-4" />
   </div>
 </template>
